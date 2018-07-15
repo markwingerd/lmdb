@@ -2,7 +2,7 @@
 {% if artists %}
   <ul>
   {% for artist in artists %}
-    <li><a href="{% url 'detail' artist.id %}">{{ artist.name }}</a> - {{ artist.active }}</li>
+    <li><a href="{% url 'music:detail' artist.id %}">{{ artist.name }}</a> - {{ artist.active }}</li>
   {% endfor %}
   </ul>
 {% else %}
