@@ -1,4 +1,8 @@
 import os
+from .settings_local import SECRET_KEY, DATABASES
+
+# SECRET_KEY and DATABASES is set in settings_local. You can make a copy of
+# settings_local.py.example, rename it without .example and fill in the blanks
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -8,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['LMDB_SECRET_KEY']
+# SECRET_KEY = os.environ['LMDB_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -62,16 +66,16 @@ WSGI_APPLICATION = 'lmdb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ['LMDB_DB_NAME'],
-        'USER': os.environ['LMDB_DB_USER'],
-        'PASSWORD': os.environ['LMDB_DB_PASS'],
-        'HOST': '127.0.0.1',
-        'PORT': 3306,
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.environ['LMDB_DB_NAME'],
+#         'USER': os.environ['LMDB_DB_USER'],
+#         'PASSWORD': os.environ['LMDB_DB_PASS'],
+#         'HOST': '127.0.0.1',
+#         'PORT': 3306,
+#     }
+# }
 
 
 # Password validation

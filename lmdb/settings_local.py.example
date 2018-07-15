@@ -1,0 +1,12 @@
+SECRET_KEY = 'some_random_string'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'database_name',
+        'USER': 'database_username',
+        'PASSWORD': 'database_user_password',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+    }
+}
