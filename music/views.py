@@ -10,7 +10,7 @@ from music.models import Artist
 
 def index(request):
     if request.method == 'GET':
-        artists = Artist.objects.all()
+        artists = Artist.objects.all().order_by('name')
         return render(request, 'index.html', {'artists': artists})
     elif request.method == 'POST':
         # Validation
@@ -32,7 +32,7 @@ def detail(request, artist_id):
         raise Http404("Artist does not exist")
     content = {
         'artist': artist,
-        'albums': artist.album_set.all(),
+        'albums': artist.album_set.all().order_by('name'),
         'links': artist.link_set.all(),
     }
 
