@@ -7,7 +7,7 @@ Local music database
 
 # Setup
 
-Setup MySql Database
+Setup MySql Database or SqlLite with a little bit of extra configuration (Docs will be improved soon)
 ```
 mysql -u root -p
 CREATE DATABASE {database name};
